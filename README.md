@@ -2,6 +2,16 @@
 
 This repository contains SQL queries written for analyzing e-commerce data using **Google BigQuery**. The queries cover topics like customer segmentation, product revenue analysis, and loyalty metrics.
 
+## Source Data
+
+The following source data files are included in the `data` folder:
+
+1. **customers.csv**: Contains customer information such as `Customer ID`, `First Name`, `Last Name`, `City`, and `State`.
+2. **orders.csv**: Contains order-level data such as `Order ID`, `Customer ID`, `Total Amount`, and `Order Date`.
+3. **products.csv**: Contains product information such as `Product ID`, `Product Name`, `Category`, and `Price`.
+
+These datasets are used for running the SQL queries in this repository. You can load these files into your database (e.g., BigQuery) to replicate the analysis.
+
 ## Queries Included
 
 - **Check for NULL Values**: SQL queries that check for missing values in key columns (e.g., `Customer ID`, `Order ID`, etc.).
@@ -15,11 +25,7 @@ This repository contains SQL queries written for analyzing e-commerce data using
 
 1. Copy the SQL queries from the `.sql` files.
 2. Open the **BigQuery Console** in your Google Cloud Platform account.
-3. Paste the queries into the SQL editor and run them on your dataset.
+3. Upload the csv files to the database
+4. Paste the queries into the SQL editor and run them on your dataset.
 
-## Prerequisites
 
-- You need access to **Google BigQuery** with a dataset similar to:
-  - `customer_data`: Contains information like `Customer ID`, `First Name`, `City`, etc.
-  - `order_data`: Contains `Order ID`, `Customer ID`, `Total Amount`, etc.
-  - `order_details`: Contains `Order ID`, `Product ID`, `Quantity`, `Price`, etc.
